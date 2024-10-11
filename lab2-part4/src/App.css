@@ -42,6 +42,7 @@
  .note-item {
   display: flex;
   flex-direction: column;
+  justify-content: space-between; 
   border: 1px solid #ccc;
  padding: 10px;
  border-radius: 5px;
@@ -106,20 +107,44 @@ textarea {
 }
 
 .edit-buttons {
- display: flex;
+ display: "flex";
+ padding-top: 20px;
  justify-content: space-evenly;
  gap: 5px;
 }
 
 .edit-buttons button {
  flex: 1;
+ padding-top: 20px;
 }
 
 .edit-buttons button:last-of-type {
+ padding-top: 20px;
  background-color: rgb(220, 89, 89);
  color: white;
 }
 
-.noteTextArea{
-  
+
+.favorite-heart {
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #ccc; /* Default color for the heart */
+  margin-left: 10px;
+}
+
+.favorite-heart.liked {
+  color: red; /* Color the heart red when it's favorited */
+}
+
+.note-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.note-item .edit-buttons {
+  margin-top: auto; /* Pushes the Edit button to the bottom */
 }
